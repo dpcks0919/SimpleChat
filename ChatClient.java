@@ -5,7 +5,7 @@ public class ChatClient {
 
 	public static void main(String[] args) {
 		if(args.length != 2){
-			System.out.println("Usage : java ChatClient <username> <server-ip>");
+			System.out.println("Usage :  java ChatClient <username> <server-ip>");
 			System.exit(1);
 		}
 		Socket sock = null;
@@ -17,7 +17,7 @@ public class ChatClient {
 			pw = new PrintWriter(new OutputStreamWriter(sock.getOutputStream()));
 			br = new BufferedReader(new InputStreamReader(sock.getInputStream()));
 			BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
-			// send username.
+			// send username..
 			pw.println(args[0]);
 			pw.flush();
 			InputThread it = new InputThread(sock, br);
